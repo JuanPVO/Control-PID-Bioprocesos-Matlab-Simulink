@@ -9,8 +9,8 @@ Ts = 0.1;% for EKF
 CO = [1e-3 1e0 1e-3 1e-3 1e-1 1e-1 1e-1 1e-1];
 ICO= [1e-3 1e-3 1e-3 1e-3 1e-1 1e-1 1e-1 1e-1];
 MCO = 1E-3;
-Kp = 10.5;
-Ki = 0.001;
+Kp = 2.5;
+Ki = 0.1;
 %% Simulink
 tic
 mdl = 'PID';
