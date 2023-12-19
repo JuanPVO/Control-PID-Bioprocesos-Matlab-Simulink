@@ -1,4 +1,4 @@
-function biofedbatch_PP(block)
+function biofedbatch_PP2(block)
 
 setup(block);
 
@@ -16,7 +16,7 @@ block.SetPreCompInpPortInfoToDynamic;
 block.SetPreCompOutPortInfoToDynamic;
 
 % Override input port properties
-block.InputPort(1).Dimensions        = 4;
+block.InputPort(1).Dimensions        = 5;
 block.InputPort(1).DatatypeID  = 0;  % double
 block.InputPort(1).Complexity  = 'Real';
 % block.InputPort(1).DirectFeedthrough = true;
@@ -58,10 +58,11 @@ u1=block.InputPort(1).Data(1);
 u2=block.InputPort(1).Data(2);
 u3=block.InputPort(1).Data(3);
 u4=block.InputPort(1).Data(4);
+u5=block.InputPort(1).Data(5);
 x=block.ContStates.Data;
 
 
-dy=Modelo_loteal2(x,u1,u2,u3,u4);
+dy=Modelo_loteal2(x,u1,u2,u3,u4,u5);
 
 block.Derivatives.Data=dy;
 
